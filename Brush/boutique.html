@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/boutique.css">
+    <link href="http://fonts.cdnfonts.com/css/market-deco" rel="stylesheet">
+    <title>Brush</title>
+</head>
+
+<body>
+    <div class="overlay-basket">
+        <form class="form">
+            <div class="inpFull">
+                <label for="name">Titulaire</label>
+                <input type="text" name="name" id="name" required maxlength="30" placeholder="Entrez le titulaire de la carte">
+            </div>
+            <div class="inpFull">
+                <label for="num">Numéros</label>
+                <input type="text" name="numero" id="num" required placeholder="8888-8888-8888-8888" pattern="[0-9\s]+" maxlength="19">
+            </div>
+            <div class="contExSecu">
+                <div class="inpExp">
+                    <label for="expiration">Exp.</label>
+                    <select name="monthExp" id="expiration" class="select1">
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <span>/</span>
+                    <select name="yearExp" class="select2">
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                    </select>
+                </div>
+                <div class="inpSecu">
+                    <label for="crypto">Crypto</label>
+                    <input type="text" name="crypto" id="crypto" required maxlength="3" placeholder="XXX" pattern="[0-9]{3}">
+                </div>
+            </div>
+
+            <div class="contBtn">
+                <button onclick="closeOverlay()">Confirmer et Payer</button>
+            </div>
+        </form>
+        <div class="cross-form" onclick="closeOverlay()">✖</div>
+    </div>
+    <header class="header" id="home">
+        <aside>
+            <p><a href="http://facebook.com" target="_blank"><img src="./src/img/facebook.png" alt="logo facebook"></a></p>
+            <p><a href="http://youtube.com" target="_blank"><img src="./src/img/youtube.png" alt="logo you tube"></a></p>
+            <p><a href="http://instagram.com" target="_blank"><img src="./src/img/instagram.png" alt="logo instagram"></a></p>
+        </aside>
+        <div class="menu-burger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="bloc-logo">
+            <p>
+                <a href="./index.html"><img src="./src/img/logo-brush.png" alt="logo" class="logo"></a>
+            </p>       
+            <p>Les barbers du futur</p>
+        </div>
+        <div class="overlay">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html#about">A Propos</a></li>
+                    <li><a href="./index.html#barbers">Les Barbers</a></li>
+                    <li><a href="./boutique.html">La boutique</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="care">
+            <h1>Nos produits ont du talent</h1>
+            <div class="care-container">
+                <div class="bloc1">
+                    <img src="./src/img/bio-2.png" alt="ecolo" width="100px">
+                    <p>À partir de ressources naturelles, 100% bio</p>
+                </div>
+                <div class="bloc2">
+                    <img src="./src/img/france.png" alt="carte de france" width="100px">
+                    <p>Nos produits sont pensés, conçus et conservés en France.</p>
+                </div>
+                <div class="bloc3">
+                    <img src="./src/img/animal-cruelty.png" alt="image de non tests sur les animaux" width="100px">
+                    <p>Ils ne sont pas tester sur les animaux ! Pensons à leurs bien-être</p>
+                </div>
+                <div class="bloc4">
+                    <img src="./src/img/hypoallergenic.png" alt="icone hypoallergenique" width="70px">
+                    <p>Hyppoallergénique, idéale pour peaux sensibles</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="products">
+            <div class="modal">
+                <div class="header-modal">
+                    <div><h2>Mon panier</h2></div>
+                    <div class="cross">✖</div>
+                </div>
+                <div class="body-modal">
+
+                </div>
+                <div class="footer-modal">
+                    <p id="totalHt">TotalHT : </p>
+                    <p id="tva">TVA : </p>
+                    <p id="ttc">TTC : </p>
+                </div>
+                <div class="btn-group">
+                    <button class="continue" onclick="closeModal()">Continuer</button>
+                    <button class="delete">Supprimer</button>
+                    <button class="check" >Valider</button>
+                </div>
+            </div>
+            <h2>Nos Superbes produits</h2>
+            <div class="container-products">
+                <div class="product1">
+                    <div class="header-product">
+                        <div class="header-title">
+                            <h2 class="title">Le fameux</h2>
+                            <p class="price">4.99<sup><span>$</span></sup></p>
+                        </div>
+                        <p><img src="./src/img/blaireau.png" alt="blaireau de barbier" width="100px"></p>
+                    </div>
+                    <div class="body-products">
+                        <p>Ce blaireau fera de votre rasage un moment de douceur. Il se compose de 100% de poils naturels de sanglier permettant de ne pas abimer votre barbe et votre peau. Convient à tous !</p>
+                        <p class="liste">- Soulève le poil de la peau permettant un rasage plus efficace</p>
+                        <p>-  Élimine les cellules mortes de la peau</p>
+                    </div>
+                    <div class="add-product">
+                        <p class="less">-</p>
+                        <span class="quantity">0</span>
+                        <p class="more">+</p>
+                    </div>
+                    <div class="btn-product" onclick="addId(1)">
+                        <button class="articles">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <div class="product2">
+                    <div class="header-product">
+                        <div class="header-title">
+                            <h2 class="title">Le fatal</h2>
+                            <p class="price">19.99<sup><span>$</span></sup></p>
+                        </div>
+                        <p><img src="./src/img/parfum.png" alt="parfum pour la barbe" width="150px"></p>
+                    </div>
+                    <div class="body-products">
+                        <p>Laissez vous emportez par le parfait équilibre entre les essences boisées aux notes légèrement fumées et la douceur de l’huile de jojoba.</p>
+                        <p class="liste">-  Parfume et nourri votre précieuse barbe</p>
+                        <p><em>30 ml</em></p>
+                    </div>
+                    <div class="add-product">
+                        <p class="less">-</p>
+                        <span class="quantity">0</span>
+                        <p class="more">+</p>
+                    </div>
+                    <div class="btn-product" onclick="addId(2)">
+                        <button class="articles" >Ajouter au panier</button>
+                    </div>
+                </div>
+                <div class="product3">
+                    <div class="header-product">
+                        <div class="header-title">
+                            <h2 class="title">Le longbear</h2>
+                            <p class="price">4.99<sup><span>$</span></sup></p>
+                        </div>
+                        <p><img src="./src/img/huile.png" alt="huile de barbier" width="100px"></p>
+                    </div>
+                    <div class="body-products">
+                        <p>Cette huile est spécialement conçu pour toutes les barbes. Il est un condensé de la nature : citron, sésame, jojoba, ricin et coco. </p>
+                        <p class="liste">-  Facilite la pousse </p>
+                        <p>-  Entretient et nourrit la barbe</p>
+                        <p><em>100 ml</em></p>
+                    </div>
+                    <div class="add-product">
+                        <p class="less">-</p>
+                        <span class="quantity">0</span>
+                        <p class="more">+</p>
+                    </div>
+                    <div class="btn-product" onclick="addId(3)">
+                        <button class="articles" >Ajouter au panier</button>
+                    </div>
+                </div>
+                <div class="product4">
+                    <div class="header-product">
+                        <div class="header-title">
+                            <h2 class="title">Le domptable</h2>
+                            <p class="price">18.99<sup><span>$</span></sup></p>
+                        </div>
+                        <p><img src="./src/img/peigne.png" alt="peigne à barbe" width="200px" class="peigne"></p>
+                    </div>
+                    <div class="body-products">
+                        <p>Le domptable offre une parfaite ergonomie et s’adapte à tout type et style de barbe. Conçu à partir de bois de makoré (le chouchou des ébénistes). </p>
+                        <p class="liste">-  Offre une grande robustesse</p>
+                        <p>-  Propriété anti-statique</p>
+                        <p>-  100% recyclable</p>
+                    </div>
+                    <div class="add-product">
+                        <p class="less">-</p>
+                        <span class="quantity">0</span>
+                        <p class="more">+</p>
+                    </div>
+                    <div class="btn-product" onclick="addId(4)">
+                        <button class="articles" >Ajouter au panier</button>
+                    </div>
+                </div>
+                <div class="product5">
+                    <div class="header-product">
+                        <div class="header-title">
+                            <h2 class="title">Shampouinou</h2>
+                            <p class="price">4.99<sup><span>$</span></sup></p>
+                        </div>
+                        <p><img src="./src/img/shampoing.png" alt="shampoing liquide pour barbe" width="100px"></p>
+                    </div>
+                    <div class="body-products">
+                        <p>Notre shampoing liquide à été réfléchi pour offrir à vos cheveux un véritable soin et une odeur parfumée. </p>
+                        <p class="liste">-  Adoucit les cheveux pour faciliter le brossage et hydrate votre épiderme</p>
+                        <p>-  Parfume le cuir chevelu</p>
+                        <p><em>250 ml</em></p>
+                    </div>
+                    <div class="add-product">
+                        <p class="less">-</p>
+                        <span class="quantity">0</span>
+                        <p class="more">+</p>
+                    </div>
+                    <div class="btn-product" onclick="addId(5)">
+                        <button class="articles" >Ajouter au panier</button>
+                    </div>
+                </div>
+                <div class="product6">
+                    <div class="header-product">
+                        <div class="header-title">
+                            <h2 class="title">Le solid</h2>
+                            <p class="price">7.99<sup><span>$</span></sup></p>
+                        </div>
+                        <p><img src="./src/img/shampoing-solide.png" alt="shampoing solide" width="200px"></p>
+                    </div>
+                    <div class="body-products">
+                        <p>Du shampoing solide pour votre barbe à base de karité, de fleurs d’orangés, de cire d’abeille et d’huile d’argan. </p>
+                        <p class="liste">-  Nourri et hydrate le poil et la peau</p>
+                        <p>-  Discipline et adoucit les poils rebelles</p>
+                        <p><em>100 g</em></p>
+                    </div>
+                    <div class="add-product">
+                        <p class="less">-</p>
+                        <span class="quantity">0</span>
+                        <p class="more">+</p>
+                    </div>
+                    <div class="btn-product" onclick="addId(6)">
+                        <button class="articles" >Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="look">
+            <div class="look-at-product">
+                <button class="btn-look">Voir le panier</button>
+            </div>
+        </section>
+        <section id="delivery">
+            <div class="container-delivery">
+                <div class="delivery1">
+                    <p><img src="./src/img/48h.png" alt="logo horaire de livraison" width="120px"></p>
+                    <p>Livraison disponible<br> en 48h</p>
+                </div>
+                <div class="delivery2">
+                    <p><img src="./src/img/click.png" alt="logo click and collecte" width="120px"></p>
+                    <p>Click & collecte:<br> la commande à retirer à la boutique</p>
+                </div>
+                <div class="delivery3">
+                    <p><img src="./src/img/truck.png" alt="logo camion de livraison" width="150px"></p>
+                    <p>Livraison gratuite<br> dès 20€ d'achats</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container-footer">
+
+            <div class="footer-logo">
+                <p><img src="src/img/logo-brush-footer.png" alt="logo" width="150"></p>
+                <p>Barbier par passion et surtout pour vous ! Bienvenue dans notre barber shop ambiance vintage avec des professionnels à votre écoute. Nous vous proposons des soins pour vos cheveux ou pour votre barbe. N'hesitez pas à passer à la boutique pour plus de renseignements !</p>
+            </div>
+
+            <div class="infos">
+                <div class="mail">
+                    <p><img src="src/img/mail.svg" alt="icon mail" width="30px"></p>
+                    <p>infos@brush.com</p>
+                </div>
+                <div class="call">
+                    <p><img src="src/img/call.svg" alt="icon mail" width="30px"></p>
+                    <p>0708796542</p>
+                </div>
+                <div class="phone">
+                    <p><img src="src/img/phone.svg" alt="icon mail" width="30px"></p>
+                    <p>0243678698</p>
+                </div>
+            </div>
+
+            <div class="infos-map">
+                <div class="adress">
+                    <p><img src="src/img/clock.svg" alt="icon mail" width="30px"></p>
+                    <p>9-19h du lundi au samedi</p>
+                </div>
+                <div class="map">
+                    <p><img src="src/img/placeholder.svg" alt="icon mail" width="30px"></p>
+                    <p>8 rue de Saint-Malo<br> 35000 Rennes</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/app.js"></script>
+    <script src="./js/boutique.js"></script>
+</body>
+</html>

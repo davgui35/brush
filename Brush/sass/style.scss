@@ -1,0 +1,720 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("http://fonts.cdnfonts.com/css/market-deco");
+@import "vars";
+@import "placeholder";
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: $font-content;
+  background-image: url("../src/img/fond-homepage.png");
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  font-family: "Market Deco";
+}
+
+/*_________________/*
+|       header     |
+/*_________________*/
+
+.header {
+  height: 120vh;
+  width: 100%;
+  background-image: url("../src/img/bg-header.png");
+  background-position: center;
+  background-size: cover;
+
+  aside {
+    position: fixed;
+    top: 40%;
+    left: 20px;
+    p {
+      margin-bottom: 10px;
+    }
+    img {
+      width: 55px;
+    }
+    img:hover {
+      transition: all 1s cubic-bezier(0.07, 0.92, 0.82, -0.01);
+      transform: rotate(-45deg);
+    }
+  }
+
+  .bloc-logo {
+    @extend %center-flex;
+    flex-direction: column;
+    .logo {
+      @extend %logo;
+    }
+    p {
+      font-family: $font-title;
+      color: $color-white;
+      margin-top: 20px;
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 660px) {
+  aside {
+    display: none;
+  }
+}
+
+// Menu burger
+.menu-burger {
+  cursor: pointer;
+  position: fixed;
+  z-index: 7;
+  top: 30px;
+  right: 60px;
+  @for $i from 1 through 3 {
+    .bar#{$i} {
+      width: 50px;
+      height: 5px;
+      background-color: $color-white;
+      margin-bottom: 6px;
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+// Animation menu burger
+.clicked-bar1 {
+  transform: rotate(-45deg) translate(-8px, 7px);
+}
+.clicked-bar2 {
+  opacity: 0;
+}
+.clicked-bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.overlay {
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  opacity: 1;
+  nav {
+    height: 100vh;
+    @extend %center-flex;
+    ul {
+      margin-left: -50px;
+    }
+    a {
+      text-decoration: none;
+      font-family: $font-title;
+      font-size: 2.4rem;
+      color: $color-gray;
+
+      &:hover {
+        border-bottom: 2px solid $color-gray;
+      }
+    }
+  }
+}
+
+// Media queries
+@media screen and (max-width: 1000px) {
+  .header {
+    text-align: center;
+    width: 100%;
+    .bloc-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .logo {
+        margin-top: 280px;
+        width: 300px;
+      }
+      p {
+        font-family: $font-title;
+        color: $color-white;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+/*_________________/*
+|       Main     |
+/*_________________*/
+
+#about {
+  padding: 0 150px 0 150px;
+  margin-top: 200px;
+  width: 100%;
+  margin-bottom: 150px;
+  @extend %center-flex;
+  .picture {
+    img {
+      width: 480px;
+      &:hover {
+        transition: all 1s ease-in;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .content-picture:not(p) {
+    display: inline-block;
+    text-align: center;
+    h2 {
+      font-family: $font-title;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .para {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    img {
+      width: 250px;
+    }
+
+    .customers-stat {
+      @extend %around-flex;
+      p {
+        font-size: 1.3rem;
+        margin-bottom: 35px;
+        span {
+          font-size: 3rem;
+          color: $color-red;
+          font-family: $font-title;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  #about {
+    margin-top: -60px;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+
+    .content-picture {
+      margin-top: 30px;
+    }
+  }
+}
+
+#barbers {
+  height: 850px;
+  background-image: url("../src/img/fond_barber.png");
+  background-position: top;
+  background-size: cover;
+  h2 {
+    width: 100%;
+    text-align: center;
+    font-family: $font-title;
+    color: $color-white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    padding-top: 120px;
+    letter-spacing: 0.4rem;
+  }
+  .main-para {
+    text-align: center;
+    color: $color-yellow;
+    font-family: $font-title;
+  }
+  .persos {
+    padding-left: 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 330px);
+    grid-template-rows: repeat(2, 100px);
+    grid-gap: 20px;
+  }
+
+  .perso1 {
+    grid-area: 0 / 0 / 1 / 2;
+    text-align: center;
+    h3 {
+      @extend %styleNameBarber;
+    }
+    p {
+      margin-top: 20px;
+      color: $color-white;
+      font-size: 1rem;
+      .sup {
+        margin: 10px;
+      }
+      .sub {
+        margin: 10px;
+      }
+    }
+  }
+  .perso2 {
+    grid-area: 2 / 2 / 3 / 3;
+    text-align: center;
+    h3 {
+      @extend %styleNameBarber;
+    }
+    p {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: $color-white;
+      .sup {
+        margin: 10px;
+      }
+      .sub {
+        margin: 10px;
+      }
+    }
+  }
+  .perso3 {
+    grid-area: 1/ 3 / 2 / 3;
+    text-align: center;
+    h3 {
+      @extend %styleNameBarber;
+    }
+    p {
+      margin-top: 20px;
+      color: $color-white;
+      font-size: 1rem;
+      .sup {
+        margin: 10px;
+      }
+      .sub {
+        margin: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  #barbers {
+    height: auto;
+    padding: 35px;
+    text-align: center;
+    .persos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      @for $i from 1 through 3 {
+        padding-left: 20px;
+        .perso#{$i} {
+          max-width: 75%;
+          p {
+            margin: 20px;
+            min-width: 200px;
+            max-width: 280px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #barbers {
+    height: max-content;
+    padding-bottom: 100px;
+    text-align: center;
+    h2 {
+      font-size: 1.5rem;
+      padding-top: 50px;
+    }
+    .persos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      @for $i from 1 through 3 {
+        .perso#{$i} {
+          width: 100%;
+          sup,
+          sub {
+            display: none;
+          }
+          img {
+            width: 150px;
+          }
+          h3 {
+            font-size: 1rem;
+          }
+
+          p {
+            max-width: 100%;
+            margin: 10px 80px 0 80px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #barbers {
+    height: max-content;
+    padding-bottom: 100px;
+    text-align: center;
+    h2 {
+      font-size: 1.5rem;
+      padding-top: 50px;
+    }
+    .persos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      @for $i from 1 through 3 {
+        .perso#{$i} {
+          width: 100%;
+          sup,
+          sub {
+            display: none;
+          }
+          img {
+            width: 150px;
+          }
+          h3 {
+            font-size: 1rem;
+          }
+
+          p {
+            margin: 0;
+            text-align: justify;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*_________________/*
+|       Boutique   |
+/*_________________*/
+
+#boutique-container {
+  background-image: url("../src/img/fond-homepage.png");
+  background-size: cover;
+  background-position: center;
+  .content-boutique {
+    margin-top: 50px;
+    text-align: center;
+    h6 {
+      color: $color-red;
+      font-size: 1.2rem;
+      font-family: $font-title;
+    }
+    h2 {
+      font-size: 2.5rem;
+      font-family: $font-title;
+    }
+    p {
+      font-family: $font-content;
+      margin-bottom: 30px;
+    }
+  }
+  .container-price {
+    @extend %center-flex;
+    flex-wrap: wrap;
+    position: relative;
+    .picture-price {
+      img {
+        text-align: center;
+        padding-left: -100px;
+      }
+    }
+    .prices {
+      h3 {
+        font-size: 2rem;
+        font-family: $font-title;
+        margin-bottom: 20px;
+      }
+      .bloc-baby {
+        margin-top: 20px;
+      }
+      .bloc-junior {
+        margin-top: 50px;
+      }
+      .bloc-barber {
+        margin-top: 20px;
+        @extend %margin-left;
+      }
+      .bloc-hair {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        @extend %margin-left;
+      }
+      .bloc-both {
+        @extend %margin-left;
+      }
+      .bloc-price-baby {
+        @extend %price;
+        color: $color-blue;
+        span {
+          font-weight: lighter;
+        }
+      }
+      .bloc-price-senior {
+        @extend %price;
+        color: #db9c52;
+        span {
+          font-weight: lighter;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .content-boutique {
+    text-align: center;
+  }
+  .picture-price {
+    display: none;
+  }
+  .prices {
+    .bloc-baby,
+    .bloc-junior {
+      h3,
+      p {
+        padding-left: 70px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .content-boutique {
+    text-align: center;
+  }
+  .picture-price {
+    display: none;
+  }
+  .container-price {
+    margin-left: -50px;
+    .prices {
+      .bloc-baby,
+      .bloc-junior {
+        h3,
+        p {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .content-boutique {
+    margin-left: 0px;
+  }
+  .picture-price {
+    display: none;
+  }
+  .baby {
+    margin-left: 30px;
+    margin-right: -30px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  #boutique-container {
+    .container-price {
+      .baby {
+        margin-left: -20px;
+      }
+    }
+  }
+}
+
+/*_________________/*
+|      visite      |
+/*_________________*/
+
+#visite {
+  margin-top: 50px;
+  background-image: url("../src/img/fond-jaune.png");
+  background-size: cover;
+  background-position: center;
+  .container-visite {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    .content-visite {
+      margin-left: -300px;
+      p {
+        font-family: $font-title;
+        color: $color-red;
+        font-weight: 700;
+      }
+      h4 {
+        font-family: $font-title;
+        margin-top: 10px;
+        font-size: 2rem;
+      }
+      .link-boutique {
+        @extend %around-flex;
+        div {
+          @extend %center-flex;
+          border-radius: 50%;
+          text-align: center;
+        }
+        a {
+          margin-top: 20px;
+          text-decoration: none;
+          color: #000;
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  #visite {
+    .container-visite {
+      .blaireau {
+        width: 250px;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 898px) {
+  #visite {
+    .container-visite {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .blaireau {
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+      }
+
+      .content-visite {
+        padding-left: -10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 898px) {
+  #visite {
+    .container-visite {
+      .content-visite {
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+/*_________________/*
+|      videos      |
+/*_________________*/
+
+#video {
+  margin: 60px 0 60px 0;
+  background-image: url("../src/img/fond-homepage.png");
+  background-size: cover;
+  background-position: center;
+  @extend %center-flex;
+  video {
+    border: none;
+    outline: none;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  video {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #video {
+    margin-left: 35px;
+    video {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+
+/*_________________/*
+|      footer      |
+/*_________________*/
+
+footer {
+  width: 100%;
+  height: auto;
+  background-image: url("../src/img/fond-footer-noir2.png");
+  background-size: cover;
+  background-position: center;
+  padding-top: 30px;
+  .container-footer {
+    padding: 50px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .footer-logo {
+      max-width: 50%;
+      p {
+        max-width: 400px;
+        margin: 40px;
+      }
+    }
+    .infos {
+      margin-right: 30px;
+      p {
+        margin: 10px 0 10px 0;
+      }
+    }
+
+    .infos-map {
+      p {
+        margin: 10px 0 10px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-footer {
+    margin: 0 20px 0 20px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .container-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0 50px 0;
+    .footer-logo:not(img) {
+      padding-top: 25px;
+      p {
+        display: none;
+      }
+    }
+    .infos {
+      padding-top: 25px;
+    }
+    .infos-map {
+      p {
+        padding-left: 25px;
+      }
+    }
+  }
+}

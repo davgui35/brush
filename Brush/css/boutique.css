@@ -1,0 +1,1101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,400&display=swap");
+@import url("http://fonts.cdnfonts.com/css/market-deco");
+.header .bloc-logo .logo {
+  margin-top: 80px;
+  width: 600px;
+}
+
+#look, #delivery, #products .container-products .product6 .add-product, #products .container-products .product5 .add-product, #products .container-products .product4 .add-product, #products .container-products .product3 .add-product, #products .container-products .product2 .add-product, #products .container-products .product1 .add-product, .overlay nav, .header .bloc-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#delivery .container-delivery, #products .container-products {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto";
+  background-image: url("../src/img/fond-homepage.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/*_________________/*
+|       header     |
+/*_________________*/
+.header {
+  height: 120vh;
+  width: 100%;
+  background-image: url("../src/img/fond-header2.png");
+  background-position: center;
+  background-size: cover;
+}
+.header aside {
+  position: fixed;
+  top: 40%;
+  left: 20px;
+}
+.header aside p {
+  margin-bottom: 10px;
+}
+.header aside img {
+  width: 55px;
+}
+.header aside img:hover {
+  transition: all 1s cubic-bezier(0.07, 0.92, 0.82, -0.01);
+  transform: rotate(-45deg);
+}
+.header .bloc-logo {
+  flex-direction: column;
+}
+.header .bloc-logo p {
+  font-family: "Market Deco";
+  color: #f1f1f1;
+  margin-top: 20px;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 660px) {
+  aside {
+    display: none;
+  }
+}
+.menu-burger {
+  cursor: pointer;
+  position: fixed;
+  z-index: 7;
+  top: 30px;
+  right: 60px;
+}
+.menu-burger .bar1 {
+  width: 50px;
+  height: 5px;
+  background-color: #f1f1f1;
+  margin-bottom: 6px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.menu-burger .bar2 {
+  width: 50px;
+  height: 5px;
+  background-color: #f1f1f1;
+  margin-bottom: 6px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.menu-burger .bar3 {
+  width: 50px;
+  height: 5px;
+  background-color: #f1f1f1;
+  margin-bottom: 6px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.clicked-bar1 {
+  transform: rotate(-45deg) translate(-8px, 7px);
+}
+
+.clicked-bar2 {
+  opacity: 0;
+}
+
+.clicked-bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.overlay {
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  opacity: 1;
+}
+.overlay nav {
+  height: 100vh;
+}
+.overlay nav ul {
+  margin-left: -25px;
+}
+.overlay nav a {
+  text-decoration: none;
+  font-family: "Market Deco";
+  font-size: 2.4rem;
+  color: #eae0c8;
+}
+.overlay nav a:hover {
+  border-bottom: 2px solid #eae0c8;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    text-align: center;
+    width: 100%;
+  }
+  .header .bloc-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .header .bloc-logo .logo {
+    margin-top: 280px;
+    width: 300px;
+  }
+  .header .bloc-logo p {
+    font-family: "Market Deco";
+    color: #f1f1f1;
+    font-size: 2rem;
+  }
+}
+/*_________________/*
+|      care        |
+/*_________________*/
+#care {
+  display: block;
+  margin: 75px auto;
+  max-width: 1000px;
+  background-image: url("../src/img/fond-homepage.png");
+  background-size: cover;
+  background-position: center;
+}
+#care h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+#care .care-container {
+  padding: 0 70px 0 70px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#care .care-container .bloc1 {
+  max-width: 200px;
+}
+#care .care-container img {
+  margin: 0 0 20px 40px;
+}
+#care .care-container .bloc2 {
+  max-width: 200px;
+}
+#care .care-container img {
+  margin: 0 0 20px 40px;
+}
+#care .care-container .bloc3 {
+  max-width: 200px;
+}
+#care .care-container img {
+  margin: 0 0 20px 40px;
+}
+#care .care-container .bloc4 {
+  max-width: 200px;
+}
+#care .care-container img {
+  margin: 0 0 20px 40px;
+}
+
+/*_________________/*
+|      products    |
+/*_________________*/
+#products {
+  margin: 75px auto;
+  max-width: 1000px;
+  background-image: url("../src/img/fond-homepage.png");
+  background-size: cover;
+  background-position: center;
+}
+#products h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Market Deco";
+  color: #000;
+  margin-bottom: 80px;
+}
+#products .container-products {
+  max-width: 1000px;
+  flex-wrap: wrap;
+}
+#products .container-products .product1 {
+  max-width: 300px;
+  margin: 10px;
+  padding-right: 10px;
+  border-right: 3px solid #f7eea1;
+}
+#products .container-products .product1 img:hover {
+  transition: 1s cubic-bezier(0.07, 0.92, 0.83, 0.67);
+  transform: scale(1.2);
+}
+#products .container-products .product1 .body-products {
+  margin-top: 25px;
+}
+#products .container-products .product1 img {
+  margin: 0 0 30px 30px;
+}
+#products .container-products .product1 .header-product {
+  display: flex;
+}
+#products .container-products .product1 .header-product .peigne {
+  transform: rotate(45deg);
+  margin-bottom: 90px;
+}
+#products .container-products .product1 .header-product .peigne:hover {
+  transition: 0.5s ease-in-out;
+  transform: scale(1.2);
+}
+#products .container-products .product1 .header-product .header-title {
+  position: relative;
+  align-self: center;
+}
+#products .container-products .product1 .header-product .header-title h2 {
+  color: #c12b27;
+  font-family: "Market Deco";
+  font-size: 1rem;
+}
+#products .container-products .product1 .header-product .header-title p:last-child {
+  max-height: 180px;
+  position: absolute;
+  top: 70px;
+  font-family: "Roboto";
+}
+#products .container-products .product1 .header-product .header-title .price {
+  font-size: 2rem;
+  color: #103643;
+  font-weight: bolder;
+  font-family: "Market Deco";
+}
+#products .container-products .product1 .header-product .header-title .price span {
+  font-weight: lighter;
+}
+#products .container-products .product1 .body-products .liste {
+  max-height: 50px;
+  margin-top: 20px;
+}
+#products .container-products .product1 .body-products em {
+  color: #103643;
+  font-weight: 600;
+}
+#products .container-products .product1 .add-product {
+  margin-top: 15px;
+  text-align: center;
+}
+#products .container-products .product1 .add-product .more {
+  cursor: pointer;
+  margin: 15px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+#products .container-products .product1 .add-product .less {
+  cursor: pointer;
+  margin: 15px;
+  font-size: 2rem;
+  font-weight: 400;
+}
+#products .container-products .product1 .btn-product {
+  text-align: center;
+}
+#products .container-products .product1 .btn-product .articles {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 2px solid #c12b27;
+  border-radius: 999px;
+}
+#products .container-products .product1 .btn-product .articles:hover {
+  transition: 1s ease-in-out;
+  background: #c12b27;
+  color: #f1f1f1;
+}
+#products .container-products .product2 {
+  max-width: 300px;
+  margin: 10px;
+  padding-right: 10px;
+  border-right: 3px solid #f7eea1;
+}
+#products .container-products .product2 img:hover {
+  transition: 1s cubic-bezier(0.07, 0.92, 0.83, 0.67);
+  transform: scale(1.2);
+}
+#products .container-products .product2 .add-product {
+  padding-top: 25px;
+}
+#products .container-products .product2 img {
+  margin: 0 0 25px 30px;
+}
+#products .container-products .product2 .header-product {
+  display: flex;
+}
+#products .container-products .product2 .header-product .peigne {
+  transform: rotate(45deg);
+  margin-bottom: 90px;
+}
+#products .container-products .product2 .header-product .peigne:hover {
+  transition: 0.5s ease-in-out;
+  transform: scale(1.2);
+}
+#products .container-products .product2 .header-product .header-title {
+  position: relative;
+  align-self: center;
+}
+#products .container-products .product2 .header-product .header-title h2 {
+  color: #c12b27;
+  font-family: "Market Deco";
+  font-size: 1rem;
+}
+#products .container-products .product2 .header-product .header-title p:last-child {
+  max-height: 180px;
+  position: absolute;
+  top: 70px;
+  font-family: "Roboto";
+}
+#products .container-products .product2 .header-product .header-title .price {
+  font-size: 2rem;
+  color: #103643;
+  font-weight: bolder;
+  font-family: "Market Deco";
+}
+#products .container-products .product2 .header-product .header-title .price span {
+  font-weight: lighter;
+}
+#products .container-products .product2 .body-products .liste {
+  max-height: 50px;
+  margin-top: 20px;
+}
+#products .container-products .product2 .body-products em {
+  color: #103643;
+  font-weight: 600;
+}
+#products .container-products .product2 .add-product {
+  margin-top: 15px;
+  text-align: center;
+}
+#products .container-products .product2 .add-product .more {
+  cursor: pointer;
+  margin: 15px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+#products .container-products .product2 .add-product .less {
+  cursor: pointer;
+  margin: 15px;
+  font-size: 2rem;
+  font-weight: 400;
+}
+#products .container-products .product2 .btn-product {
+  text-align: center;
+}
+#products .container-products .product2 .btn-product .articles {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 2px solid #c12b27;
+  border-radius: 999px;
+}
+#products .container-products .product2 .btn-product .articles:hover {
+  transition: 1s ease-in-out;
+  background: #c12b27;
+  color: #f1f1f1;
+}
+#products .container-products .product3 {
+  max-width: 300px;
+  margin: 10px;
+  padding-top: -30px;
+  border-right: 3px solid #f7eea1;
+}
+#products .container-products .product3 img:hover {
+  transition: 1s cubic-bezier(0.07, 0.92, 0.83, 0.67);
+  transform: scale(1.2);
+}
+#products .container-products .product3 .add-product {
+  padding-top: 25px;
+}
+#products .container-products .product3 .header-product {
+  display: flex;
+}
+#products .container-products .product3 .header-product .peigne {
+  transform: rotate(45deg);
+  margin-bottom: 90px;
+}
+#products .container-products .product3 .header-product .peigne:hover {
+  transition: 0.5s ease-in-out;
+  transform: scale(1.2);
+}
+#products .container-products .product3 .header-product .header-title {
+  position: relative;
+  align-self: center;
+}
+#products .container-products .product3 .header-product .header-title h2 {
+  color: #c12b27;
+  font-family: "Market Deco";
+  font-size: 1rem;
+}
+#products .container-products .product3 .header-product .header-title p:last-child {
+  max-height: 180px;
+  position: absolute;
+  top: 70px;
+  font-family: "Roboto";
+}
+#products .container-products .product3 .header-product .header-title .price {
+  font-size: 2rem;
+  color: #103643;
+  font-weight: bolder;
+  font-family: "Market Deco";
+}
+#products .container-products .product3 .header-product .header-title .price span {
+  font-weight: lighter;
+}
+#products .container-products .product3 .body-products .liste {
+  max-height: 50px;
+  margin-top: 20px;
+}
+#products .container-products .product3 .body-products em {
+  color: #103643;
+  font-weight: 600;
+}
+#products .container-products .product3 .add-product {
+  margin-top: 15px;
+  text-align: center;
+}
+#products .container-products .product3 .add-product .more {
+  cursor: pointer;
+  margin: 15px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+#products .container-products .product3 .add-product .less {
+  cursor: pointer;
+  margin: 15px;
+  font-size: 2rem;
+  font-weight: 400;
+}
+#products .container-products .product3 .btn-product {
+  text-align: center;
+}
+#products .container-products .product3 .btn-product .articles {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 2px solid #c12b27;
+  border-radius: 999px;
+}
+#products .container-products .product3 .btn-product .articles:hover {
+  transition: 1s ease-in-out;
+  background: #c12b27;
+  color: #f1f1f1;
+}
+#products .container-products .product4 {
+  max-width: 300px;
+  margin: 10px;
+  margin-top: 60px;
+  padding-right: 10px;
+  border-right: 3px solid #f7eea1;
+}
+#products .container-products .product4 img:hover {
+  transition: 1s cubic-bezier(0.07, 0.92, 0.83, 0.67);
+  transform: scale(1.2);
+}
+#products .container-products .product4 .header-product {
+  display: flex;
+}
+#products .container-products .product4 .header-product .peigne {
+  transform: rotate(45deg);
+  margin-bottom: 90px;
+}
+#products .container-products .product4 .header-product .peigne:hover {
+  transition: 0.5s ease-in-out;
+  transform: scale(1.2);
+}
+#products .container-products .product4 .header-product .header-title {
+  position: relative;
+  align-self: center;
+}
+#products .container-products .product4 .header-product .header-title h2 {
+  color: #c12b27;
+  font-family: "Market Deco";
+  font-size: 1rem;
+}
+#products .container-products .product4 .header-product .header-title p:last-child {
+  max-height: 180px;
+  position: absolute;
+  top: 70px;
+  font-family: "Roboto";
+}
+#products .container-products .product4 .header-product .header-title .price {
+  font-size: 2rem;
+  color: #103643;
+  font-weight: bolder;
+  font-family: "Market Deco";
+}
+#products .container-products .product4 .header-product .header-title .price span {
+  font-weight: lighter;
+}
+#products .container-products .product4 .body-products .liste {
+  max-height: 50px;
+  margin-top: 20px;
+}
+#products .container-products .product4 .body-products em {
+  color: #103643;
+  font-weight: 600;
+}
+#products .container-products .product4 .add-product {
+  margin-top: 15px;
+  text-align: center;
+}
+#products .container-products .product4 .add-product .more {
+  cursor: pointer;
+  margin: 15px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+#products .container-products .product4 .add-product .less {
+  cursor: pointer;
+  margin: 15px;
+  font-size: 2rem;
+  font-weight: 400;
+}
+#products .container-products .product4 .btn-product {
+  text-align: center;
+}
+#products .container-products .product4 .btn-product .articles {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 2px solid #c12b27;
+  border-radius: 999px;
+}
+#products .container-products .product4 .btn-product .articles:hover {
+  transition: 1s ease-in-out;
+  background: #c12b27;
+  color: #f1f1f1;
+}
+#products .container-products .product5 {
+  max-width: 300px;
+  margin: 10px;
+  margin-top: 30px;
+  padding-right: 10px;
+  border-right: 3px solid #f7eea1;
+}
+#products .container-products .product5 img:hover {
+  transition: 1s cubic-bezier(0.07, 0.92, 0.83, 0.67);
+  transform: scale(1.2);
+}
+#products .container-products .product5 img {
+  margin: 0 0 25px 30px;
+}
+#products .container-products .product5 .header-product {
+  display: flex;
+}
+#products .container-products .product5 .header-product .peigne {
+  transform: rotate(45deg);
+  margin-bottom: 90px;
+}
+#products .container-products .product5 .header-product .peigne:hover {
+  transition: 0.5s ease-in-out;
+  transform: scale(1.2);
+}
+#products .container-products .product5 .header-product .header-title {
+  position: relative;
+  align-self: center;
+}
+#products .container-products .product5 .header-product .header-title h2 {
+  color: #c12b27;
+  font-family: "Market Deco";
+  font-size: 1rem;
+}
+#products .container-products .product5 .header-product .header-title p:last-child {
+  max-height: 180px;
+  position: absolute;
+  top: 70px;
+  font-family: "Roboto";
+}
+#products .container-products .product5 .header-product .header-title .price {
+  font-size: 2rem;
+  color: #103643;
+  font-weight: bolder;
+  font-family: "Market Deco";
+}
+#products .container-products .product5 .header-product .header-title .price span {
+  font-weight: lighter;
+}
+#products .container-products .product5 .body-products .liste {
+  max-height: 50px;
+  margin-top: 20px;
+}
+#products .container-products .product5 .body-products em {
+  color: #103643;
+  font-weight: 600;
+}
+#products .container-products .product5 .add-product {
+  margin-top: 15px;
+  text-align: center;
+}
+#products .container-products .product5 .add-product .more {
+  cursor: pointer;
+  margin: 15px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+#products .container-products .product5 .add-product .less {
+  cursor: pointer;
+  margin: 15px;
+  font-size: 2rem;
+  font-weight: 400;
+}
+#products .container-products .product5 .btn-product {
+  text-align: center;
+}
+#products .container-products .product5 .btn-product .articles {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 2px solid #c12b27;
+  border-radius: 999px;
+}
+#products .container-products .product5 .btn-product .articles:hover {
+  transition: 1s ease-in-out;
+  background: #c12b27;
+  color: #f1f1f1;
+}
+#products .container-products .product6 {
+  max-width: 300px;
+  margin: 10px;
+  margin-top: 80px;
+}
+#products .container-products .product6 img:hover {
+  transition: 1s cubic-bezier(0.07, 0.92, 0.83, 0.67);
+  transform: scale(1.2);
+}
+#products .container-products .product6 .header-product .header-title img {
+  padding-top: -30px;
+}
+#products .container-products .product6 .body-products {
+  margin-top: 30px;
+}
+#products .container-products .product6 .add-product {
+  padding-top: 35px;
+}
+#products .container-products .product6 .header-product {
+  display: flex;
+}
+#products .container-products .product6 .header-product .peigne {
+  transform: rotate(45deg);
+  margin-bottom: 90px;
+}
+#products .container-products .product6 .header-product .peigne:hover {
+  transition: 0.5s ease-in-out;
+  transform: scale(1.2);
+}
+#products .container-products .product6 .header-product .header-title {
+  position: relative;
+  align-self: center;
+}
+#products .container-products .product6 .header-product .header-title h2 {
+  color: #c12b27;
+  font-family: "Market Deco";
+  font-size: 1rem;
+}
+#products .container-products .product6 .header-product .header-title p:last-child {
+  max-height: 180px;
+  position: absolute;
+  top: 70px;
+  font-family: "Roboto";
+}
+#products .container-products .product6 .header-product .header-title .price {
+  font-size: 2rem;
+  color: #103643;
+  font-weight: bolder;
+  font-family: "Market Deco";
+}
+#products .container-products .product6 .header-product .header-title .price span {
+  font-weight: lighter;
+}
+#products .container-products .product6 .body-products .liste {
+  max-height: 50px;
+  margin-top: 20px;
+}
+#products .container-products .product6 .body-products em {
+  color: #103643;
+  font-weight: 600;
+}
+#products .container-products .product6 .add-product {
+  margin-top: 15px;
+  text-align: center;
+}
+#products .container-products .product6 .add-product .more {
+  cursor: pointer;
+  margin: 15px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+#products .container-products .product6 .add-product .less {
+  cursor: pointer;
+  margin: 15px;
+  font-size: 2rem;
+  font-weight: 400;
+}
+#products .container-products .product6 .btn-product {
+  text-align: center;
+}
+#products .container-products .product6 .btn-product .articles {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 2px solid #c12b27;
+  border-radius: 999px;
+}
+#products .container-products .product6 .btn-product .articles:hover {
+  transition: 1s ease-in-out;
+  background: #c12b27;
+  color: #f1f1f1;
+}
+#products .modal {
+  display: none;
+  position: fixed;
+  z-index: 8;
+  top: 30px;
+  right: 20px;
+  width: 290px;
+  height: max-content;
+  padding: 5px 10px;
+  background: #f1eded;
+  border-radius: 5px;
+}
+#products .modal .header-modal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#products .modal .header-modal .cross {
+  cursor: pointer;
+}
+#products .modal .header-modal h2 {
+  margin-bottom: 0;
+}
+#products .modal .body-modal {
+  display: block;
+  width: 100%;
+}
+#products .modal #totalHt,
+#products .modal #tva,
+#products .modal #ttc {
+  text-align: center;
+  font-family: "Market Deco";
+}
+#products .btn-group {
+  text-align: center;
+}
+#products .btn-group .continue,
+#products .btn-group .check,
+#products .btn-group .delete {
+  border: none;
+  outline: none;
+  margin: 10px;
+  cursor: pointer;
+}
+#products .btn-group .continue {
+  border: 1px solid #103643;
+  padding: 5px;
+  border-radius: 999px;
+}
+#products .btn-group .continue:hover {
+  transition: 1s ease-in-out;
+  background: #103643;
+  color: #f1f1f1;
+}
+#products .btn-group .delete {
+  border: 1px solid #c12b27;
+  padding: 5px;
+  border-radius: 999px;
+}
+#products .btn-group .delete:hover {
+  transition: 1s ease-in-out;
+  background: #c12b27;
+  color: #f1f1f1;
+}
+#products .btn-group .check {
+  border: 1px solid rgba(65, 187, 116, 0.6);
+  padding: 5px;
+  border-radius: 999px;
+}
+#products .btn-group .check:hover {
+  transition: 1s ease-in-out;
+  background: rgba(65, 187, 116, 0.6);
+  color: #f1f1f1;
+}
+
+#delivery .container-delivery {
+  margin: 60px 0 60px 0;
+  text-align: center;
+  max-width: 1100px;
+  flex-wrap: wrap;
+}
+#delivery .container-delivery .delivery1 {
+  margin: 60px;
+}
+#delivery .container-delivery p {
+  margin: 20px;
+}
+#delivery .container-delivery .delivery2 {
+  margin: 60px;
+}
+#delivery .container-delivery p {
+  margin: 20px;
+}
+#delivery .container-delivery .delivery3 {
+  margin: 60px;
+}
+#delivery .container-delivery p {
+  margin: 20px;
+}
+
+.overlay-basket {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 30;
+}
+.overlay-basket .form {
+  text-align: left;
+  width: 450px;
+  position: fixed;
+  padding: 20px 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background: #f1f1f1;
+  box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.6);
+  z-index: 50;
+}
+.overlay-basket .form .contMontant {
+  text-align: center;
+  font-size: 1.2rem;
+  height: 90px;
+  border-bottom: 1px dashed #000;
+}
+.overlay-basket .form .contMontant p {
+  line-height: 90px;
+}
+.overlay-basket .form .inpFull {
+  width: 100%;
+  height: 60px;
+}
+.overlay-basket .form .inpFull:nth-child(1) {
+  border-bottom: 1px dashed #000;
+}
+.overlay-basket .form .inpFull label {
+  float: left;
+  width: 30%;
+  height: 100%;
+  font-size: 1.2rem;
+  display: block;
+  line-height: 76px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.overlay-basket .form .inpFull input {
+  width: 70%;
+  height: 100%;
+  border: none;
+  padding-left: 5px;
+  font-size: 0.8rem;
+}
+.overlay-basket .form .inpFull input::placeholder {
+  font-size: 15px;
+  opacity: 0.8;
+}
+.overlay-basket .form input:active {
+  outline: none;
+  background: #f1f1f1;
+}
+.overlay-basket .form .contExSecu {
+  width: 100%;
+  height: 80px;
+  border-top: 1px dashed black;
+  border-bottom: 1px dashed black;
+}
+.overlay-basket .form .inpExp {
+  width: 48%;
+  height: 100%;
+  float: left;
+  border-right: 1px dashed black;
+}
+.overlay-basket .form .inpExp label {
+  font-size: 0.8rem;
+  line-height: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.overlay-basket .form select {
+  border: none;
+  font-size: 0.7rem;
+  outline: none;
+}
+.overlay-basket .form .select2 {
+  width: 60px;
+}
+.overlay-basket .form .inpSecu {
+  width: 42%;
+  height: 100%;
+  float: right;
+  position: relative;
+}
+.overlay-basket .form .inpSecu label {
+  float: left;
+  width: 45%;
+  font-size: 0.8rem;
+  line-height: 76px;
+}
+.overlay-basket .form .inpSecu input {
+  width: 55%;
+  height: 100%;
+  border: none;
+  padding-left: 10px;
+}
+.overlay-basket .form .inpSecu input::placeholder {
+  opacity: 0.8;
+}
+.overlay-basket .form .contBtn {
+  position: relative;
+  height: 150px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 100%;
+}
+.overlay-basket .form .contBtn button {
+  background: #c2c2c2;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.2s ease background;
+}
+.overlay-basket .form button:hover {
+  color: #f1f1f1;
+  background: #103643;
+}
+.overlay-basket .cross-form {
+  width: 420px;
+  font-size: 1.8rem;
+  position: fixed;
+  padding: 20px 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(39%, -270%);
+  z-index: 50;
+  cursor: pointer;
+}
+
+#look .btn-look {
+  margin-top: 30px;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 140px;
+  border: 2px solid #103643;
+  border-radius: 999px;
+}
+#look .btn-look:hover {
+  transition: 1s ease-in-out;
+  background: #103643;
+  color: #f1f1f1;
+}
+
+/*_________________/*
+|      footer      |
+/*_________________*/
+footer {
+  width: 100%;
+  height: auto;
+  background-image: url("../src/img/fond-footer-noir2.png");
+  background-size: cover;
+  background-position: center;
+  padding-top: 30px;
+}
+footer .container-footer {
+  padding: 50px 0 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer .container-footer .footer-logo {
+  max-width: 50%;
+}
+footer .container-footer .footer-logo p {
+  max-width: 400px;
+  margin: 40px;
+}
+footer .container-footer .infos {
+  margin-right: 30px;
+}
+footer .container-footer .infos p {
+  margin: 10px 0 10px 0;
+}
+footer .container-footer .infos-map p {
+  margin: 10px 0 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .container-footer {
+    margin: 0 20px 0 20px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .container-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0 50px 0;
+  }
+  .container-footer .footer-logo:not(img) {
+    padding-top: 25px;
+  }
+  .container-footer .footer-logo:not(img) p {
+    display: none;
+  }
+  .container-footer .infos {
+    padding-top: 25px;
+  }
+  .container-footer .infos-map p {
+    padding-left: 25px;
+  }
+}
+
+/*# sourceMappingURL=boutique.css.map */

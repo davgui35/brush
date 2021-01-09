@@ -1,0 +1,40 @@
+%logo {
+  margin-top: 80px;
+  width: 600px;
+}
+
+%center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%around-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+%center-fleNoAlign {
+  display: flex;
+  justify-content: center;
+}
+
+%styleNameBarber {
+  font-size: 2rem;
+  color: $color-white;
+  text-transform: uppercase;
+  font-family: $font-title;
+}
+
+%margin-left {
+  margin-left: 50px;
+}
+
+%price {
+  text-align: end;
+  font-weight: bolder;
+  font-size: 8rem;
+  font-family: $font-title;
+  letter-spacing: 12px;
+}

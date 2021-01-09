@@ -1,0 +1,766 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("http://fonts.cdnfonts.com/css/market-deco");
+.header .bloc-logo .logo {
+  margin-top: 80px;
+  width: 600px;
+}
+
+#video, #visite .container-visite .content-visite .link-boutique div, #boutique-container .container-price, #about, .overlay nav, .header .bloc-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#visite .container-visite .content-visite .link-boutique, #about .content-picture:not(p) .customers-stat {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#barbers .perso3 h3, #barbers .perso2 h3, #barbers .perso1 h3 {
+  font-size: 2rem;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  font-family: "Market Deco";
+}
+
+#boutique-container .container-price .prices .bloc-both, #boutique-container .container-price .prices .bloc-hair, #boutique-container .container-price .prices .bloc-barber {
+  margin-left: 50px;
+}
+
+#boutique-container .container-price .prices .bloc-price-senior, #boutique-container .container-price .prices .bloc-price-baby {
+  text-align: end;
+  font-weight: bolder;
+  font-size: 8rem;
+  font-family: "Market Deco";
+  letter-spacing: 12px;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: "Roboto";
+  background-image: url("../src/img/fond-homepage.png");
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  font-family: "Market Deco";
+}
+
+/*_________________/*
+|       header     |
+/*_________________*/
+.header {
+  height: 120vh;
+  width: 100%;
+  background-image: url("../src/img/bg-header.png");
+  background-position: center;
+  background-size: cover;
+}
+.header aside {
+  position: fixed;
+  top: 40%;
+  left: 20px;
+}
+.header aside p {
+  margin-bottom: 10px;
+}
+.header aside img {
+  width: 55px;
+}
+.header aside img:hover {
+  transition: all 1s cubic-bezier(0.07, 0.92, 0.82, -0.01);
+  transform: rotate(-45deg);
+}
+.header .bloc-logo {
+  flex-direction: column;
+}
+.header .bloc-logo p {
+  font-family: "Market Deco";
+  color: #f1f1f1;
+  margin-top: 20px;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 660px) {
+  aside {
+    display: none;
+  }
+}
+.menu-burger {
+  cursor: pointer;
+  position: fixed;
+  z-index: 7;
+  top: 30px;
+  right: 60px;
+}
+.menu-burger .bar1 {
+  width: 50px;
+  height: 5px;
+  background-color: #f1f1f1;
+  margin-bottom: 6px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.menu-burger .bar2 {
+  width: 50px;
+  height: 5px;
+  background-color: #f1f1f1;
+  margin-bottom: 6px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.menu-burger .bar3 {
+  width: 50px;
+  height: 5px;
+  background-color: #f1f1f1;
+  margin-bottom: 6px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.clicked-bar1 {
+  transform: rotate(-45deg) translate(-8px, 7px);
+}
+
+.clicked-bar2 {
+  opacity: 0;
+}
+
+.clicked-bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.overlay {
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  opacity: 1;
+}
+.overlay nav {
+  height: 100vh;
+}
+.overlay nav ul {
+  margin-left: -50px;
+}
+.overlay nav a {
+  text-decoration: none;
+  font-family: "Market Deco";
+  font-size: 2.4rem;
+  color: #eae0c8;
+}
+.overlay nav a:hover {
+  border-bottom: 2px solid #eae0c8;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    text-align: center;
+    width: 100%;
+  }
+  .header .bloc-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .header .bloc-logo .logo {
+    margin-top: 280px;
+    width: 300px;
+  }
+  .header .bloc-logo p {
+    font-family: "Market Deco";
+    color: #f1f1f1;
+    font-size: 2rem;
+  }
+}
+/*_________________/*
+|       Main     |
+/*_________________*/
+#about {
+  padding: 0 150px 0 150px;
+  margin-top: 200px;
+  width: 100%;
+  margin-bottom: 150px;
+}
+#about .picture img {
+  width: 480px;
+}
+#about .picture img:hover {
+  transition: all 1s ease-in;
+  transform: scale(1.2);
+}
+#about .content-picture:not(p) {
+  display: inline-block;
+  text-align: center;
+}
+#about .content-picture:not(p) h2 {
+  font-family: "Market Deco";
+  font-size: 2rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+#about .content-picture:not(p) .para {
+  text-align: left;
+  margin-bottom: 20px;
+}
+#about .content-picture:not(p) img {
+  width: 250px;
+}
+#about .content-picture:not(p) .customers-stat p {
+  font-size: 1.3rem;
+  margin-bottom: 35px;
+}
+#about .content-picture:not(p) .customers-stat p span {
+  font-size: 3rem;
+  color: #c12b27;
+  font-family: "Market Deco";
+}
+
+@media screen and (max-width: 1300px) {
+  #about {
+    margin-top: -60px;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+  }
+  #about .content-picture {
+    margin-top: 30px;
+  }
+}
+#barbers {
+  height: 850px;
+  background-image: url("../src/img/fond_barber.png");
+  background-position: top;
+  background-size: cover;
+}
+#barbers h2 {
+  width: 100%;
+  text-align: center;
+  font-family: "Market Deco";
+  color: #f1f1f1;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  padding-top: 120px;
+  letter-spacing: 0.4rem;
+}
+#barbers .main-para {
+  text-align: center;
+  color: #f7eea1;
+  font-family: "Market Deco";
+}
+#barbers .persos {
+  padding-left: 150px;
+  display: grid;
+  grid-template-columns: repeat(3, 330px);
+  grid-template-rows: repeat(2, 100px);
+  grid-gap: 20px;
+}
+#barbers .perso1 {
+  grid-area: 0/0/1/2;
+  text-align: center;
+}
+#barbers .perso1 p {
+  margin-top: 20px;
+  color: #f1f1f1;
+  font-size: 1rem;
+}
+#barbers .perso1 p .sup {
+  margin: 10px;
+}
+#barbers .perso1 p .sub {
+  margin: 10px;
+}
+#barbers .perso2 {
+  grid-area: 2/2/3/3;
+  text-align: center;
+}
+#barbers .perso2 p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #f1f1f1;
+}
+#barbers .perso2 p .sup {
+  margin: 10px;
+}
+#barbers .perso2 p .sub {
+  margin: 10px;
+}
+#barbers .perso3 {
+  grid-area: 1/3/2/3;
+  text-align: center;
+}
+#barbers .perso3 p {
+  margin-top: 20px;
+  color: #f1f1f1;
+  font-size: 1rem;
+}
+#barbers .perso3 p .sup {
+  margin: 10px;
+}
+#barbers .perso3 p .sub {
+  margin: 10px;
+}
+
+@media screen and (max-width: 1350px) {
+  #barbers {
+    height: auto;
+    padding: 35px;
+    text-align: center;
+  }
+  #barbers .persos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-left: 20px;
+    padding-left: 20px;
+  }
+  #barbers .persos .perso1 {
+    max-width: 75%;
+  }
+  #barbers .persos .perso1 p {
+    margin: 20px;
+    min-width: 200px;
+    max-width: 280px;
+    text-align: center;
+  }
+  #barbers .persos .perso2 {
+    max-width: 75%;
+  }
+  #barbers .persos .perso2 p {
+    margin: 20px;
+    min-width: 200px;
+    max-width: 280px;
+    text-align: center;
+  }
+  #barbers .persos .perso3 {
+    max-width: 75%;
+  }
+  #barbers .persos .perso3 p {
+    margin: 20px;
+    min-width: 200px;
+    max-width: 280px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  #barbers {
+    height: max-content;
+    padding-bottom: 100px;
+    text-align: center;
+  }
+  #barbers h2 {
+    font-size: 1.5rem;
+    padding-top: 50px;
+  }
+  #barbers .persos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #barbers .persos .perso1 {
+    width: 100%;
+  }
+  #barbers .persos .perso1 sup,
+#barbers .persos .perso1 sub {
+    display: none;
+  }
+  #barbers .persos .perso1 img {
+    width: 150px;
+  }
+  #barbers .persos .perso1 h3 {
+    font-size: 1rem;
+  }
+  #barbers .persos .perso1 p {
+    max-width: 100%;
+    margin: 10px 80px 0 80px;
+    text-align: center;
+  }
+  #barbers .persos .perso2 {
+    width: 100%;
+  }
+  #barbers .persos .perso2 sup,
+#barbers .persos .perso2 sub {
+    display: none;
+  }
+  #barbers .persos .perso2 img {
+    width: 150px;
+  }
+  #barbers .persos .perso2 h3 {
+    font-size: 1rem;
+  }
+  #barbers .persos .perso2 p {
+    max-width: 100%;
+    margin: 10px 80px 0 80px;
+    text-align: center;
+  }
+  #barbers .persos .perso3 {
+    width: 100%;
+  }
+  #barbers .persos .perso3 sup,
+#barbers .persos .perso3 sub {
+    display: none;
+  }
+  #barbers .persos .perso3 img {
+    width: 150px;
+  }
+  #barbers .persos .perso3 h3 {
+    font-size: 1rem;
+  }
+  #barbers .persos .perso3 p {
+    max-width: 100%;
+    margin: 10px 80px 0 80px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  #barbers {
+    height: max-content;
+    padding-bottom: 100px;
+    text-align: center;
+  }
+  #barbers h2 {
+    font-size: 1.5rem;
+    padding-top: 50px;
+  }
+  #barbers .persos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #barbers .persos .perso1 {
+    width: 100%;
+  }
+  #barbers .persos .perso1 sup,
+#barbers .persos .perso1 sub {
+    display: none;
+  }
+  #barbers .persos .perso1 img {
+    width: 150px;
+  }
+  #barbers .persos .perso1 h3 {
+    font-size: 1rem;
+  }
+  #barbers .persos .perso1 p {
+    margin: 0;
+    text-align: justify;
+  }
+  #barbers .persos .perso2 {
+    width: 100%;
+  }
+  #barbers .persos .perso2 sup,
+#barbers .persos .perso2 sub {
+    display: none;
+  }
+  #barbers .persos .perso2 img {
+    width: 150px;
+  }
+  #barbers .persos .perso2 h3 {
+    font-size: 1rem;
+  }
+  #barbers .persos .perso2 p {
+    margin: 0;
+    text-align: justify;
+  }
+  #barbers .persos .perso3 {
+    width: 100%;
+  }
+  #barbers .persos .perso3 sup,
+#barbers .persos .perso3 sub {
+    display: none;
+  }
+  #barbers .persos .perso3 img {
+    width: 150px;
+  }
+  #barbers .persos .perso3 h3 {
+    font-size: 1rem;
+  }
+  #barbers .persos .perso3 p {
+    margin: 0;
+    text-align: justify;
+  }
+}
+/*_________________/*
+|       Boutique   |
+/*_________________*/
+#boutique-container {
+  background-image: url("../src/img/fond-homepage.png");
+  background-size: cover;
+  background-position: center;
+}
+#boutique-container .content-boutique {
+  margin-top: 50px;
+  text-align: center;
+}
+#boutique-container .content-boutique h6 {
+  color: #c12b27;
+  font-size: 1.2rem;
+  font-family: "Market Deco";
+}
+#boutique-container .content-boutique h2 {
+  font-size: 2.5rem;
+  font-family: "Market Deco";
+}
+#boutique-container .content-boutique p {
+  font-family: "Roboto";
+  margin-bottom: 30px;
+}
+#boutique-container .container-price {
+  flex-wrap: wrap;
+  position: relative;
+}
+#boutique-container .container-price .picture-price img {
+  text-align: center;
+  padding-left: -100px;
+}
+#boutique-container .container-price .prices h3 {
+  font-size: 2rem;
+  font-family: "Market Deco";
+  margin-bottom: 20px;
+}
+#boutique-container .container-price .prices .bloc-baby {
+  margin-top: 20px;
+}
+#boutique-container .container-price .prices .bloc-junior {
+  margin-top: 50px;
+}
+#boutique-container .container-price .prices .bloc-barber {
+  margin-top: 20px;
+}
+#boutique-container .container-price .prices .bloc-hair {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#boutique-container .container-price .prices .bloc-price-baby {
+  color: #103643;
+}
+#boutique-container .container-price .prices .bloc-price-baby span {
+  font-weight: lighter;
+}
+#boutique-container .container-price .prices .bloc-price-senior {
+  color: #db9c52;
+}
+#boutique-container .container-price .prices .bloc-price-senior span {
+  font-weight: lighter;
+}
+
+@media screen and (max-width: 1220px) {
+  .content-boutique {
+    text-align: center;
+  }
+
+  .picture-price {
+    display: none;
+  }
+
+  .prices .bloc-baby h3,
+.prices .bloc-baby p,
+.prices .bloc-junior h3,
+.prices .bloc-junior p {
+    padding-left: 70px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .content-boutique {
+    text-align: center;
+  }
+
+  .picture-price {
+    display: none;
+  }
+
+  .container-price {
+    margin-left: -50px;
+  }
+  .container-price .prices .bloc-baby h3,
+.container-price .prices .bloc-baby p,
+.container-price .prices .bloc-junior h3,
+.container-price .prices .bloc-junior p {
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content-boutique {
+    margin-left: 0px;
+  }
+
+  .picture-price {
+    display: none;
+  }
+
+  .baby {
+    margin-left: 30px;
+    margin-right: -30px;
+  }
+}
+@media screen and (max-width: 424px) {
+  #boutique-container .container-price .baby {
+    margin-left: -20px;
+  }
+}
+/*_________________/*
+|      visite      |
+/*_________________*/
+#visite {
+  margin-top: 50px;
+  background-image: url("../src/img/fond-jaune.png");
+  background-size: cover;
+  background-position: center;
+}
+#visite .container-visite {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#visite .container-visite .content-visite {
+  margin-left: -300px;
+}
+#visite .container-visite .content-visite p {
+  font-family: "Market Deco";
+  color: #c12b27;
+  font-weight: 700;
+}
+#visite .container-visite .content-visite h4 {
+  font-family: "Market Deco";
+  margin-top: 10px;
+  font-size: 2rem;
+}
+#visite .container-visite .content-visite .link-boutique div {
+  border-radius: 50%;
+  text-align: center;
+}
+#visite .container-visite .content-visite .link-boutique a {
+  margin-top: 20px;
+  text-decoration: none;
+  color: #000;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 1260px) {
+  #visite .container-visite .blaireau {
+    width: 250px;
+    transform: rotate(-90deg);
+  }
+}
+@media screen and (max-width: 898px) {
+  #visite .container-visite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #visite .container-visite .blaireau {
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+  }
+  #visite .container-visite .content-visite {
+    padding-left: -10px;
+  }
+}
+@media screen and (max-width: 898px) {
+  #visite .container-visite .content-visite {
+    padding-left: 10px;
+  }
+}
+/*_________________/*
+|      videos      |
+/*_________________*/
+#video {
+  margin: 60px 0 60px 0;
+  background-image: url("../src/img/fond-homepage.png");
+  background-size: cover;
+  background-position: center;
+}
+#video video {
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-width: 1220px) {
+  video {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #video {
+    margin-left: 35px;
+  }
+  #video video {
+    width: 300px;
+    height: 300px;
+  }
+}
+/*_________________/*
+|      footer      |
+/*_________________*/
+footer {
+  width: 100%;
+  height: auto;
+  background-image: url("../src/img/fond-footer-noir2.png");
+  background-size: cover;
+  background-position: center;
+  padding-top: 30px;
+}
+footer .container-footer {
+  padding: 50px 0 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer .container-footer .footer-logo {
+  max-width: 50%;
+}
+footer .container-footer .footer-logo p {
+  max-width: 400px;
+  margin: 40px;
+}
+footer .container-footer .infos {
+  margin-right: 30px;
+}
+footer .container-footer .infos p {
+  margin: 10px 0 10px 0;
+}
+footer .container-footer .infos-map p {
+  margin: 10px 0 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .container-footer {
+    margin: 0 20px 0 20px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .container-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0 50px 0;
+  }
+  .container-footer .footer-logo:not(img) {
+    padding-top: 25px;
+  }
+  .container-footer .footer-logo:not(img) p {
+    display: none;
+  }
+  .container-footer .infos {
+    padding-top: 25px;
+  }
+  .container-footer .infos-map p {
+    padding-left: 25px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
